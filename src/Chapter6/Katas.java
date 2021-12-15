@@ -1,6 +1,8 @@
 package Chapter6;
 
 public class Katas {
+    private int total;
+    private double average;
 
     public char calculateGradeFor(int score) {
         if(score>=90) return 'A';
@@ -20,4 +22,45 @@ public class Katas {
         if(copy > 199 && copy<= 499) return copy * 1100;
         return copy * 1000;
     }
+
+    public int calculateTotalOf(int[] numbers) {
+        for (int r = 0;r<numbers.length; r++){
+            total = total + numbers[r];}
+            return total;
+        }
+
+    public int calculateMinimumOf(int[] numbers) {
+        int mini = numbers[0];
+        for (int r = 0;r<numbers.length; r++){
+            mini = Math.min(mini,numbers[r] );
+        }
+        return mini;
+    }
+
+    public int calculateMaximumOf(int[] numbers) {
+        int maxi = numbers[0];
+        for (int r = 0;r<numbers.length; r++){
+            maxi = Math.max(maxi,numbers[r] );
+        }
+        return maxi;
+    }
+
+    public double calculateAverageOf(int[] numbers) {
+        for (int r = 0;r<numbers.length; r++){
+            total = total + numbers[r];}
+        return average = total/numbers.length*1.0;
+
+    }
+
+    public int calculateMaximumLessOneOf(int[] numbers) {
+          int maxLessOne = calculateTotalOf(numbers) - calculateMinimumOf(numbers);
+          return maxLessOne;
+    }
+
+    public int calculateMinimumLessOne(int[] numbers) {
+        int miniLessOne = calculateTotalOf(numbers) - calculateMaximumOf(numbers);
+        return miniLessOne;
+    }
+
 }
+

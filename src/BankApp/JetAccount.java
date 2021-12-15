@@ -3,10 +3,14 @@ package BankApp;
 public class JetAccount {
     private String name;
     private String jetPin ="2227";
-    private int balance = 50_000;
+    private int balance;
     public JetAccount(String accountName, String pin) {
         name = accountName;
         jetPin = pin;
+    }
+
+    public JetAccount() {
+
     }
 
     public String getAccountName() {
