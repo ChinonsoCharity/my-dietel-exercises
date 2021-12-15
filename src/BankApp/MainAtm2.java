@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainAtm2 {
     private static final Scanner akkant = new Scanner(System.in);//Account User
-    private static JetAccount userAccount = new JetAccount();
+    private static JetAccount userAccount = new JetAccount("Coptic", "0000");
 
     public static void main(String[] args) {
 
@@ -23,8 +23,10 @@ public class MainAtm2 {
                 System.out.println("Shebi you wan Create Account");
                 System.out.println("Oya give ya Name");
                 String name = akkant.nextLine();
+               userAccount.setAccountName(name);
                 System.out.println("Oya give ya Pin");
                 String pin = akkant.nextLine();
+                userAccount.setPin(pin);
                 JetAccount userAccount = new JetAccount(name, pin);
                 System.out.println("\nWe don Create am\n");
                 System.out.println("Welcome "+userAccount.getAccountName());

@@ -23,6 +23,19 @@ public class JetAccountTest {
 
     }
     @Test
+    public void setJetAccountPinTest(){
+        JetAccount jet = new JetAccount("Nonso Chima", "2227");
+        jet.setPin("2345");
+    }
+
+    @Test
+    public void setJetAccountNameTest(){
+        JetAccount jet = new JetAccount("Nonso Chima","2227");
+                jet.setAccountName("Jerry");
+        String accountName = jet.getAccountName();
+        assertEquals("Jerry",accountName);
+    }
+    @Test
     public void deposit5kBalanceIsTobe55kTest(){
 //        given
 //        when
@@ -52,9 +65,8 @@ public class JetAccountTest {
     public void withdrawingWithWrongPinTest(){
 //        when
         jet.withdraw(30_000,"1234");
-//        when
-        int balance = jet.getBalance("1234");
-        assertEquals(0,balance);
-
+//        check
+        int balance = jet.getBalance("2227");
+        assertEquals(50_000,balance);
     }
 }
