@@ -47,8 +47,7 @@ public class MainAtm2 {
                     Press 1 to Deposit
                     Press 2 to Withdraw
                     Press 3 to Check Balance
-                    Press 4 to Go Back
-                    Press 5 If You don tire
+                    Press 4 If You don tire
                     """;
 
             System.out.println(newAccountPrompt);
@@ -78,10 +77,7 @@ public class MainAtm2 {
                         System.out.println("Your Account Balance is " + userBalance);
                         System.out.println();
                         break;
-                    case 4 :
-                    {newUserAccount();}
-
-                    case 5:
+                    case 4:
                         System.out.println("You don tire abi? Come and be Going");
                         System.exit(0);
                 } break;

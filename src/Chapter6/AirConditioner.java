@@ -25,12 +25,18 @@ public class AirConditioner {
     }
 
     public void increaseTemperature() {
-        if(isOn && temperature < 30)
+        if(isOn && temperature <= 30)
         temperature++;
     }
 
     public void decreaseTemperature() {
         if(isOn && temperature >16)
         temperature--;
+    }
+    public String toString(){
+        String AirConditioner = "";
+        AirConditioner += "Airk AC is " +(isOn()? "ON":"OFF")+"\n";
+        AirConditioner += "Airk AC is " +getTemperature()+"\n";
+        return AirConditioner;
     }
 }

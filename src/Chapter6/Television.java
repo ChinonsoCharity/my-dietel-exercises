@@ -27,23 +27,30 @@ public class Television {
     }
 
     public int getVolume() {
-        return volume;
+        if(isOn)
+            return volume;
+        return 0;
     }
 
     public void increaseVolume() {
-        volume++;
+        if(isOn && volume<=100)
+            volume++;
     }
 
     public void decreaseVolume() {
-        volume--;
+        if(isOn && volume>0)
+            volume--;
     }
 
     public void pickChannel(int channel) {
+        if(isOn)
         watChannel = channel;
     }
 
     public int getChannel() {
-        return watChannel;
+        if(isOn && watChannel<=200)
+            return watChannel;
+        return 0;
     }
     public void pickMenuOption(int option) {
         watMenu = option;
@@ -99,7 +106,14 @@ public class Television {
 
     public void gameModeOff() {
         isGameModeOn =false;
-        //need to know
+//        need to know
+    }
+    public String toString(){
+        String Television = "" ;
+        Television += "Wat TV is "+(isOn()? "ON":"OFF")+"\n";
+        Television += "Volume is "+ getVolume() + "\n";
+        Television += "Channel " + getChannel() + "\n";
+        return Television;
     }
 
 
