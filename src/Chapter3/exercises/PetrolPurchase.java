@@ -8,7 +8,7 @@ public class PetrolPurchase {
     private double discount;
     private double netAmount;
     private double purchaseAmount;
-    private double discountUnit;
+    private double discountAmount;
     private double discountedTotalAmount;
 
     public void setStationName(String stationName) {
@@ -42,10 +42,10 @@ public class PetrolPurchase {
         return discount;
     }
     public void discountedUnitPrice(double discountPrice){
-      discountUnit = discountPrice;
+      discountAmount = discountPrice;
     }
     public double calculateDiscountedPrice(){
-       return discountUnit  = purchaseAmount * discount / 100;
+       return discountAmount  = purchaseAmount * discount / 100;
     }
     public void setNetAmount(double netPrice){
         netAmount = netPrice;
@@ -63,7 +63,7 @@ public class PetrolPurchase {
         discountedTotalAmount = discountedTotal;
     }
     public double calculateDiscountedTotal(){
-        return discountedTotalAmount = purchaseAmount - discountUnit;
+        return discountedTotalAmount = purchaseAmount - discountAmount;
     }
 
 }
