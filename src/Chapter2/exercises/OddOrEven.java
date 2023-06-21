@@ -7,7 +7,7 @@ public class OddOrEven {
     {
         Scanner check = new Scanner(System.in);
 
-        System.out.print("Enter a number");
+       //////// System.out.print("Enter a number");
 
         int num1 = check.nextInt();
         int fig = num1 % 2;

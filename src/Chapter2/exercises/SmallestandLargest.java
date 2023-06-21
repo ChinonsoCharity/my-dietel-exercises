@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SmallestandLargest {
     public static void main(String[] args){
-        Scanner mat = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         int num1;
         int num2;
@@ -14,10 +14,10 @@ public class SmallestandLargest {
 
 
         System.out.print("Enter first integer");
-        num1 = mat.nextInt();
+        num1 = input.nextInt();
 
         System.out.print("Enter second integer");
-        num2 = mat.nextInt();
+        num2 = input.nextInt();
 
         sum = num1 + num2;
         average = (num1 + num2) / 2;
